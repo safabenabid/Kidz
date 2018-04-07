@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidz.Controllers.AddConteController">
+<AnchorPane id="AnchorPane" fx:id="ajoutconte" prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kidz.Controllers.AddConteController">
     <children>
         <Label alignment="CENTER" layoutX="221.0" layoutY="14.0" prefHeight="36.0" prefWidth="179.0" text="Nouveau Conte" textAlignment="CENTER">
             <font>

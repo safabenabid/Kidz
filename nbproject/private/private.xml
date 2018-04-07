@@ -5,11 +5,12 @@
         <group>
             <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/Controllers/UpdateConteFXMLController.java</file>
             <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/Presentations/AddConte.fxml</file>
+            <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/entities/Conte.java</file>
             <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/Controllers/ShowConteFXMLController.java</file>
             <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/Controllers/AddConteController.java</file>
             <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/Presentations/ShowConteFXML.fxml</file>
             <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/kidz/Kidz.java</file>
-            <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/Presentations/UpdateConteFXML.fxml</file>
+            <file>file:/C:/Users/SAUS/Documents/NetBeansProjects/PIDEV/Kidz/src/com/kidz/services/ConteService.java</file>
         </group>
     </open-files>
 </project-private>

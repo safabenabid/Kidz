@@ -94,7 +94,7 @@ public class ConteService implements IConteService{
             st.setString(9, c.getAuteur());
             st.setBoolean(10, true);
             st.setInt(11, c.getIdCon());
-            
+             System.out.println(st);
             st.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(ConteService.class.getName()).log(Level.SEVERE, null, ex);

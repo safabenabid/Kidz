@@ -28,27 +28,27 @@ import javafx.stage.Stage;
 public class UpdateConteFXMLController implements Initializable {
 
     @FXML
-    private ChoiceBox<String> minage;
+    public ChoiceBox<String> minage;
     @FXML
-    private ChoiceBox<String> maxage;
+    public ChoiceBox<String> maxage;
     @FXML
-    private TextField titre;
+    public TextField titre;
     @FXML
-    private TextArea resume;
+    public TextArea resume;
     @FXML
-    private TextField contenu;
+    public TextField contenu;
     @FXML
-    private TextField image;
+    public TextField image;
     @FXML
-    private TextField maison;
+    public TextField maison;
     @FXML
-    private TextField aute;
+    public TextField aute;
     @FXML
-    private ChoiceBox<String> categorie;
+    public ChoiceBox<String> categorie;
     @FXML
-    private Button benregistrer;
-    private Stage dialogStage;
-    private Conte conte;
+    public Button benregistrer;
+    public Stage dialogStage;
+    
     private boolean okClicked = false;
 
     /**
@@ -69,38 +69,127 @@ public class UpdateConteFXMLController implements Initializable {
             "Conte bébé", "Conte noel","Conte arabe","Conte ecole","Conte histoire","Conte amour","Conte fantastique"
         ,"Conte fabuleuse ","Conte Humour","Conte Aventure et enquête"));
         categorie.setTooltip(new Tooltip("select categorie"));     
-        /*ConteService conte = new ConteService();
-        Conte c = new Conte();
-        //conte = ConteService.consulterPersonne(Conte.);
-        //System.out.println(Conte.toString());
-        titre.setText(c.getTitreC());        
-        resume.setText(c.getResume());
-        contenu.setText(c.getContenu());
-        aute.setText(c.getAuteur());*/   
+
+            
+
     }    
-   public void setDialogStage(Stage dialogStage) {
-        this.dialogStage = dialogStage;
-    }
+  
+
+    /**
+     * Sets
+     *
+     * @param conte
+     */
     public void setConte(Conte conte) {
-        this.conte = conte;
-        titre.setText(conte.getTitreC());
+       
+        System.out.println(conte);
+        
+        contenu.setText(conte.getContenu());
         resume.setText(conte.getResume());
         aute.setText(conte.getAuteur());
-        contenu.setText(conte.getContenu());
-        maison.setText(conte.getContenu());
-        
-        //minage.setText(conte.getMinage());
-        
-        
+        categorie.getValue();
+        minage.getValue();
+        maxage.getValue();
+        maison.setText(conte.getMaison_ed());
         
     }
-     /*public boolean isOkClicked() {
+    
+    
+
+    /**
+     * Returns true if the user clicked OK, false otherwise.
+     *
+     * @return
+     */
+    public boolean isOkClicked() {
         return okClicked;
+    }
+
+    /**
+     * Called when the user clicks ok.
+     */
+    /*@FXML
+    private void handleOk() {
+        if (isInputValid()) {
+            conte.setTitreC(titre.getText());
+            conte.setCatC(categorie.getValue());
+            conte.setContenu(contenu.getText());
+            conte.setMaison_ed(contenu.getText());
+            conte.setAuteur(aute.getText());
+            conte.setMinage(Integer.parseInt(minage.getValue()));
+            conte.setMaxage(Integer.parseInt(maxage.getValue()));
+            conte.setImage(image.getText());
+            
+
+            okClicked = true;
+            dialogStage.close();
+        }
     }*/
 
-    /*public void recuperer(Conte C) {
-       
-     
-    
+    /**
+     * Called when the user clicks cancel.
+     */
+    @FXML
+    private void handleCancel() {
+        dialogStage.close();
+    }
+
+    /**
+     * Validates the user input in the text fields.
+     *
+     * @return true if the input is valid
+     */
+    /*private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (firstNameField.getText() == null || firstNameField.getText().length() == 0) {
+            errorMessage += "No valid first name!\n";
+        }
+        if (lastNameField.getText() == null || lastNameField.getText().length() == 0) {
+            errorMessage += "No valid last name!\n";
+        }
+        if (streetField.getText() == null || streetField.getText().length() == 0) {
+            errorMessage += "No valid street!\n";
+        }
+
+        if (postalCodeField.getText() == null || postalCodeField.getText().length() == 0) {
+            errorMessage += "No valid postal code!\n";
+        } else {
+            // try to parse the postal code into an int.
+            try {
+                Integer.parseInt(postalCodeField.getText());
+            } catch (NumberFormatException e) {
+                errorMessage += "No valid postal code (must be an integer)!\n";
+            }
+        }
+
+        if (cityField.getText() == null || cityField.getText().length() == 0) {
+            errorMessage += "No valid city!\n";
+        }
+
+        if (birthdayField.getText() == null || birthdayField.getText().length() == 0) {
+            errorMessage += "No valid birthday!\n";
+        } else {
+            if (!DateUtil.validDate(birthdayField.getText())) {
+                errorMessage += "No valid birthday. Use the format dd.mm.yyyy!\n";
+            }
+        }
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+            // Show the error message.
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.initOwner(dialogStage);
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            return false;
+        }
+    }
 }*/
+ 
 }
